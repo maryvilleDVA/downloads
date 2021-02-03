@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin-top: 0px;
+  white-space: normal;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+}
+
+header h1 {
+  font-weight: 300;
+  opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #999;
+  animation-name: orb;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes orb {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.center {
+  position: relative;
+  margin: auto;
+  width: 90%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .center {
+  width: 840px;
+  height: 600px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.circle h2 {
+  line-height: 99%;
+  margin: 0;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.hit {
+  border: 4px solid #333;
+  color: #999;
+  background-color: rgba(228, 226, 226, 0.5);
+  top: 0;
+  z-index: 101;
+}
+
+.hit.hit-01 {
+  border-color: #c75615;
+  transform: translate(0, 0);
+}
+
+.hit.hit-02 {
+  border-color: #4aacca;
+  transform: translate(320px, 0);
+}
+
+.hit.hit-03 {
+  border-color: #59ca4a;
+  transform: translate(640px, 0);
+}
+
+.drag {
+  color: white;
+  z-index: 100;
+}
+
+.drag.drag-01 {
+  background-color: #c75615;
+  transform: translate(0px, 400px);
+}
+
+.drag.drag-02 {
+  background-color: #4aacca;
+  transform: translate(320px, 400px);
+}
+
+.drag.drag-03 {
+  background-color: #59ca4a;
+  transform: translate(640px, 400px);
+}
+
+.congrats {
+  pointer-events: none;
+  opacity: 0;
+  text-transform: uppercase;
+  border: 5px solid #772977;
+  background-color: rgba(240, 227, 240, 0.9);
+  color: #772977;
+  border-radius: 50px;
+  position: absolute;
+  padding: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  z-index: 1000;
+  box-shadow: rgba(41, 41, 41, 0.515) 2px 2px 5px;
+}
+
+.congrats h2 {
+  white-space: nowrap;
+  font-size: 50px;
+}
